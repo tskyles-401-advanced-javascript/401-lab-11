@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/tskyles-401-advanced-javascript/401-lab-11#readme",
   "dependencies": {
+    "@code-fellows/supergoose": "^1.0.1",
     "@tskyles/mongo-model": "^1.0.0",
     "base-64": "^0.1.0",
     "bcrypt": "^3.0.7",

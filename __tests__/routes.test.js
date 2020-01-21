@@ -8,18 +8,18 @@ const jwt = require('jsonwebtoken');
 
 describe('Route Testing', () => {
 
-  let userObj = {
-    username: 'Trevor',
-    password: 'ForTestingPurposes',
+  let userTest = {
+    username: 'Travis',
+    password: 'password',
   };
 
   let tokenID;
 
-  it('/Signup route creates new user', () => {
+  it('creates new user', () => {
     return mockRequest.post('/signup')
-      .send(userObj)
+      .send(userTest)
       .then(data => {
-        let token = jwt.verify(data.text, 'yourpasswordisplaintext');
+        let token = jwt.verify(data.text, 'password');
         tokenID = token.iat;
         expect(token.iat).toBeDefined();
       });
@@ -27,7 +27,7 @@ describe('Route Testing', () => {
 
   it('Throw error with invalid object', () => {
     return mockRequest.post('/signup')
-      .send({name: 'blah', password: 5})
+      .send({name: 'wrong', password: 5})
       .then(data => {
         expect(data.text).toEqual('Error');
       });
@@ -42,9 +42,9 @@ describe('Route Testing', () => {
 
   it('/signin authenticates user', () => {
     return mockRequest.post('/signin')
-      .auth(userObj.username, userObj.password)
+      .auth(userTest.username, userTest.password)
       .then(results => {
-        let token = jwt.verify(results.text, 'yourpasswordisplaintext');
+        let token = jwt.verify(results.text, 'password');
         expect(token.iat).toEqual(tokenID);
       });
   });
