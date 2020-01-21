@@ -1,0 +1,32 @@
+{
+  "name": "401-lab-11",
+  "version": "1.0.0",
+  "description": "Authentication",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tskyles-401-advanced-javascript/401-lab-11.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tskyles-401-advanced-javascript/401-lab-11/issues"
+  },
+  "homepage": "https://github.com/tskyles-401-advanced-javascript/401-lab-11#readme",
+  "dependencies": {
+    "@tskyles/mongo-model": "^1.0.0",
+    "base-64": "^0.1.0",
+    "bcrypt": "^3.0.7",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.8.9"
+  }
+}
