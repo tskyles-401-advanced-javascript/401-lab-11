@@ -11,8 +11,8 @@
 * [mongo-model npm](https://www.npmjs.com/package/@tskyles/mongo-model)
 
 #### Documentation
-* [api docs]()
-* [jsdocs]()
+* [api docs](https://tskyles-lab-11.herokuapp.com/api-docs/)
+* [jsdocs](https://tskyles-lab-11.herokuapp.com/docs/)
 
 ### Setup
 * clone repo

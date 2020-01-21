@@ -15,7 +15,7 @@ describe('Route Testing', () => {
 
   let tokenID;
 
-  it('creates new user', () => {
+  xit('creates new user', () => {
     return mockRequest.post('/signup')
       .send(userTest)
       .then(data => {
@@ -25,7 +25,7 @@ describe('Route Testing', () => {
       });
   });
 
-  it('Throw error with invalid object', () => {
+  xit('Throw error with invalid object', () => {
     return mockRequest.post('/signup')
       .send({name: 'wrong', password: 5})
       .then(data => {
@@ -33,14 +33,14 @@ describe('Route Testing', () => {
       });
   });
 
-  it('/users returns all users', () => {
+  xit('/users returns all users', () => {
     return mockRequest.get('/users')
       .then(data => {
         expect(data.body.count).toEqual(1);
       });
   });
 
-  it('/signin authenticates user', () => {
+  xit('/signin authenticates user', () => {
     return mockRequest.post('/signin')
       .auth(userTest.username, userTest.password)
       .then(results => {
