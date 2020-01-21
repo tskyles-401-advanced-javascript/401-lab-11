@@ -1,7 +1,7 @@
 'use strict';
 
 
-const {server} = require('../src/server');
+const {server} = require('../lib/server');
 const supergoose = require('@code-fellows/supergoose');
 const mockRequest = supergoose(server);
 const jwt = require('jsonwebtoken');
